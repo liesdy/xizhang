@@ -151,6 +151,7 @@ export default {
     // }
   },
   mounted() {
+    this.content = this.value
     this.editor = this.$refs.myQuillEditor.quill
   },
   beforeDestroy() {

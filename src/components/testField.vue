@@ -13,7 +13,8 @@ export default {
   },
   data() {
     return {
-      content: `<p></p><p><br>fadsfsafsadfafas</p><ol></ol>` // 富文本编辑器默认内容
+      content: `` // 富文本编辑器默认内容
+      // content: `<p></p><p>fadsfsafsadfafas</p><ol></ol>` // 富文本编辑器默认内容
     }
   }
   // props: {
