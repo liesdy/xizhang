@@ -1,42 +1,38 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-// import Home from '../views/Home.vue'
+import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
-  // {
-  //   path: '/',
-  //   name: 'Home',
-  //   component: Home
-  // },
   {
     path: '/',
-    name: 'testField',
-    component: () => import( /* webpackChunkName: "about" */ '@/components/testField.vue')
+    name: 'Home',
+    component: Home
   },
+  // {
+  //   path: '/testField',
+  //   name: 'testField',
+  //   component: () => import( /* webpackChunkName: "about" */ '@/components/testField.vue')
+  // },
   {
-    path: '/editor',
-    name: 'editor',
-    component: () => import( /* webpackChunkName: "about" */ '@/plugins/editor.vue')
-  },
-  {
-    path: '/helloWorld',
-    name: 'helloWorld',
-    component: () => import( /* webpackChunkName: "about" */ '@/components/HelloWorld.vue')
-  },
-  {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '@/views/About.vue')
-  },
-  {
-    path: '/flex',
-    name: 'Flex',
-    component: () => import(/* webpackChunkName: "about" */ '@/views/flex.vue')
+    path: '/css',
+    name: 'Css',
+    component: () => import(/* webpackChunkName: "about" */ '@/views/css/index.vue'),
+    children: [
+      {
+        path: 'flex',
+        name: 'Flex',
+        component: () => import(/* webpackChunkName: "about" */ '@/views/css/flex/index.vue'),
+        children: [
+          {
+            path: 'shrink',
+            name: 'Shrink',
+            component: () => import('@/views/css/flex/shrink.vue')
+          }
+        ]
+      }
+    ]
   }
 ]
 
