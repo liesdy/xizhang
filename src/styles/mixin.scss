@@ -1,0 +1,21 @@
+@mixin cover {
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 1));
+  position: relative;
+}
+
+@mixin content {
+  border-radius: 20px;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.84) 30%, rgba(255, 255, 255, 0.8) 65%, rgba(255, 255, 255, 0.6));
+  box-shadow: -1px -2px 6px 3px rgba(0, 0, 50, 0.6) inset, 0 0 10px 10px rgba(0, 0, 0, 0.7);
+}
+
+@mixin box {
+  padding: 10px 0;
+  display: flex;
+  background-color: #999;
+  justify-content: space-around;
+  width: 800px;
+  margin: 50px auto;
+}
+

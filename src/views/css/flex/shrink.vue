@@ -12,6 +12,7 @@
     <p>各项目的shrink值相加小于1时。各项目的宽度应该是在basis的基础上减去basis * shrink</p>
     <p>当各项目的shrink值相加大于1时，则以相加和 1 为上限, 按比例分配个项目自身缩减的值</p>
     <p>所以两个项目shrink分别是 0.4 0.8   实际上和shrink 分别为  1  2   在计算结果上没有区别</p>
+    <p>注意:各项目原本宽度和大于容器宽度，且shrink值相加小于1的情况下，必然会出现收缩程度不够导致总宽度大于容器宽度</p>
   </div>
 </template>
 <script>
@@ -21,8 +22,7 @@ export default {
     return {
       // basewidth: 800,
       // basewidth: 600,
-      basewidth: 600,
-      // basewidth: 400,
+      basewidth: 400,
       aa: '',
       bb: '',
       cc: ''
@@ -51,16 +51,17 @@ export default {
 </script>
 
 <style scoped lang='scss'>
-$item-width: 600px;
+$item-width: 400px;
 // $item-width: 500px;
 // $item-width: 400px;
 // $item-width: 800px;
 .box2 {
+  padding: 10px 0;
   display: flex;
-  background-color: #eee;
+  background-color: #999;
   justify-content: space-around;
-  width: 1200px;
-  margin-top: 50px;
+  width: 800px;
+  margin: 50px auto;
   .item1 {
     /**
       1. shrink = 1时 $item-width = 500时  实际宽度 400， 缩小了100
@@ -72,7 +73,7 @@ $item-width: 600px;
       7. shrink = 0.4时 $item-width = 600时  实际宽度 400， 缩小了200
      */
     flex-basis: $item-width;
-    background: #999;
+    background: skyblue;
     flex-shrink: 0.3
   }
   .item2 {
@@ -94,7 +95,7 @@ $item-width: 600px;
       shrink = 0时 该多大就多大
      */
     flex-basis: $item-width;
-    background: skyblue;
+    background: violet;
     flex-shrink: 0
   }
 }

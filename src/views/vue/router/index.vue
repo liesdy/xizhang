@@ -1,12 +1,8 @@
 <template>
   <div>
-    <h3>flex</h3>
-    <router-link :to="{ name: 'shrink'}">flex-shrink</router-link> | 
-    <router-link :to="{ name: 'grow'}">flex-grow</router-link> | 
-    <router-link :to="{ name: 'basis'}">flex-basis</router-link>
-    <!-- <transition name="slide"> -->
-      <router-view></router-view>
-    <!-- </transition> -->
+    <h3>router</h3>
+    <router-link :to="{ name: 'beforeRouteEnter'}">beforeRouteEnter</router-link> | 
+    <router-view></router-view>
   </div>
 </template>
 <script>

@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <div class="nav">
+    <!-- <div class="nav">
       <router-link to="/">HOME</router-link>
-    </div>
+    </div> -->
     <!-- <div class="nav">
       <router-link to="/flex">css</router-link> |
       <router-link to="/html5">html5</router-link> |
@@ -14,13 +14,24 @@
   </div>
 </template>
 
-<style>
+<style lang="scss" src="@/styles/common.scss"></style>
+<style lang='scss'>
+// @import '@/styles/common.scss';
+// @import "@/styles/variables.scss";
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
-  color: #2c3e50;
+  // color: $primary;
+  // color: #2c3e50;
+  height: 100%;
 }
 
 .nav {

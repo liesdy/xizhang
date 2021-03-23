@@ -1,6 +1,7 @@
 <template>
-  <div class="css">
-  <router-view></router-view>
+  <div class="content">
+    <h1>原型链</h1>
+    <router-view></router-view>
   </div>
 </template>
 <script>

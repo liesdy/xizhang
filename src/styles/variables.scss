@@ -1,0 +1,16 @@
+$primary: #409EFF;
+
+$success: #67C23A !default;
+$warning: #E6A23C !default;
+$danger: #F56C6C !default;
+$info: #909399 !default;
+
+// the :export directive is the magic sauce for webpack;
+// https://www.bluematador.com/blog/how-to-share-variables-between-js-and-sass;
+:export {
+  primary: $primary;
+  success: $success;
+  warning: $warning;
+  danger: $danger;
+  info: $info;
+}
