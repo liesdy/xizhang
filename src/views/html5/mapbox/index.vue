@@ -1,6 +1,10 @@
 <template>
   <div>
-    <h1>html5</h1>
+    <h3>mapbox</h3>
+    <router-link :to="{ name: 'mapboxStart'}">mapboxStart</router-link> | 
+    <router-link :to="{ name: 'addMarker'}">addMarker</router-link> | 
+    <router-link :to="{ name: 'markerHover'}">markerHover</router-link> | 
+    <router-link :to="{ name: 'mapChangeTest'}">mapChangeTest</router-link> | 
     <router-view></router-view>
   </div>
 </template>

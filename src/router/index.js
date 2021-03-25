@@ -89,6 +89,48 @@ const routes = [
                 component: () => import('@/views/html5/upload/drop.vue')
               }
             ]
+          },
+          {
+            path: 'mapbox',
+            name: 'mapbox',
+            meta: {
+              title: 'mapbox'
+            },
+            component: () => import('@/views/html5/mapbox/index.vue'),
+            children: [
+              {
+                path: 'mapboxStart',
+                name: 'mapboxStart',
+                meta: {
+                  title: 'mapboxStart'
+                },
+                component: () => import('@/views/html5/mapbox/mapboxStart.vue')
+              },
+              {
+                path: 'addMarker',
+                name: 'addMarker',
+                meta: {
+                  title: 'addMarker'
+                },
+                component: () => import('@/views/html5/mapbox/addMarker.vue')
+              },
+              {
+                path: 'markerHover',
+                name: 'markerHover',
+                meta: {
+                  title: 'markerHover'
+                },
+                component: () => import('@/views/html5/mapbox/markerHover.vue')
+              },
+              {
+                path: 'mapChangeTest',
+                name: 'mapChangeTest',
+                meta: {
+                  title: 'mapChangeTest'
+                },
+                component: () => import('@/views/html5/mapbox/mapChangeTest.vue')
+              }
+            ]
           }
         ]
       },
